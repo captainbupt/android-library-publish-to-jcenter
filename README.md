@@ -12,7 +12,7 @@ Bintray是jcenter的托管商，因此你必须注册一个Bintray账号，注�
 如图所示点击最右边箭头指示的复制按钮即可复制你的API Key
 
 ####2. 检查Android插件版本
-首先你要检查你的Android插件的版本，因为1.1.0版本有一个BUG会导致生成javadoc失败，所以你只需升级到最新即可。目前最新版本是1.3.0，在项目根目录下的build.gradle文件中修改版本号即可，如下:
+首先你要检查你的Android插件的版本，因为1.1.0版本有一个BUG会导致生成javadoc失败，所以你只需升级到最新即可。目前最新版本是1.5.0，在项目根目录下的build.gradle文件中修改版本号即可，如下:
 ```groovy
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
@@ -21,7 +21,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.3.0'
+        classpath 'com.android.tools.build:gradle:1.5.0’
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -40,7 +40,7 @@ allprojects {
 在项目根目录下build.gradle文件中的dependencies节点中追加如下代码：
 ```groovy
 classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
-classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.0'
+classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.2’
 ```
 android-maven-gradle-plugin插件是用来打包Maven所需文件的
 
@@ -55,9 +55,9 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.3.0'
+        classpath 'com.android.tools.build:gradle:1.5.0’
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.0'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.2’
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
